@@ -23,3 +23,6 @@ def grid(i, func=str, default=str, filt=[]):
             if filt and txt not in filt: continue
             D[(i,j)] = func(txt)
     return D
+
+D8 = [(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1)]
+D4 = [(0,-1),       (1,0),      (0,1),       (-1,0)]
