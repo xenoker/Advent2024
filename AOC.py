@@ -24,5 +24,10 @@ def grid(i, func=str, default=str, filt=[]):
             D[(i,j)] = func(txt)
     return D
 
+def showgrid(D,W,H,f=' '):
+    for y in range(H):
+        print(''.join(str(D.get((x,y),f))[0] for x in range(W)))
+
+
 D8 = [(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1)]
 D4 = [(0,-1),       (1,0),      (0,1),       (-1,0)]
