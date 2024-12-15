@@ -17,8 +17,9 @@ def getlines(i, func=str, emptys=False):
     return [func(x) for x in get(i).split('\n') if x or emptys]
 
 def grid(i, func=str, default=str, filt=[]):
+    text = '\n' in i and i or get(i)
     D = defaultdict(default)
-    for j,line in enumerate(get(i).split('\n')):
+    for j,line in enumerate(text.split('\n')):
         for i,txt in enumerate(line):
             if filt and txt not in filt: continue
             D[(i,j)] = func(txt)
